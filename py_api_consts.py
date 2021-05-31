@@ -20,6 +20,9 @@ _PG_CONNECTION = {
 _YES = 'y'
 _NO = 'n'
 
+# Constantes RegEx...
+_REGEX_ONLY_NUMBERS = "^[0-9]+$"
+
 # Constantes para métodos HTTP...
 _GET = 'GET'
 _PUT = 'PUT'
@@ -86,8 +89,8 @@ _DELETE_PRODUCT_JSON_SCHEMA = {
 _GET_PRODUCT_JSON_SCHEMA = { 
        "type": "object",
        "properties": {
-            "id": {"type":"string", "pattern": "^[0-9]+$"},
-            "page": {"type":"string", "pattern": "^[0-9]+$"},
+            "id": {"type":"string", "pattern": _REGEX_ONLY_NUMBERS},
+            "page": {"type":"string", "pattern": _REGEX_ONLY_NUMBERS},
             "order": {"type":"string", "enum": ["id","name"]}
        },
        "required": []         
@@ -99,8 +102,8 @@ _GET_PRODUCT_JSON_SCHEMA = {
 _GET_MANUFACTURER_JSON_SCHEMA = { 
        "type": "object",
        "properties": {
-            "id": {"type":"string", "pattern": "^[0-9]+$"},
-            "page": {"type":"string", "pattern": "^[0-9]+$"},
+            "id": {"type":"string", "pattern": _REGEX_ONLY_NUMBERS},
+            "page": {"type":"string", "pattern": _REGEX_ONLY_NUMBERS},
             "order": {"type":"string", "enum": ["id","name"]}
        },
        "required": []         

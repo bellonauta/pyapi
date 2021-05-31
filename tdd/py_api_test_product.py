@@ -28,8 +28,8 @@ class ProductAPITests(unittest.TestCase):
         """ Teste de inclusão de produto e fabricante. """  
         
         # Irão receber IDs para testes...
-        productId = 0                  
-        manufacturerId = 0
+        product_id = 0                  
+        manufacturer_id = 0
         
         # Arrange...
         body = { 
